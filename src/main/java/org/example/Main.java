@@ -24,11 +24,12 @@ public class Main {
         agendaEnderecos.listarEndereco();
         System.out.print(" Digite S para remover e N para não  ");
         String  resposta = scanner.nextLine();
-        if(resposta.equals("s")) {
+        if(resposta.equalsIgnoreCase("s")) {
 
             System.out.print("Digite o CEP: ");
             String cp = scanner.nextLine();
             agendaEnderecos.removerEndereco(cp);
+            agendaEnderecos.listarEndereco();
 
             System.out.println("Programa encerrado.");
         } else if(resposta.equalsIgnoreCase("n")) {
